@@ -31,19 +31,19 @@ const deselectMovieDispatch = () => ({
 
 export const fetchMovies = (query) => (dispatch) => {
   dispatch(requestMoviesDispatch(query));
-  return fetch(`http://localhost:3001/tmdb/search?${new URLSearchParams({ query })}`)
+  return fetch(`${process.env.REACT_APP_API_URL}/tmdb/search?${new URLSearchParams({ query })}`)
     .then((response) => response.json())
     .then((json) => dispatch(receiveMoviesDispatch(json)));
 };
 
-export const fetchGenres = () => (dispatch) => fetch('http://localhost:3001/tmdb/genres')
+export const fetchGenres = () => (dispatch) => fetch(`${process.env.REACT_APP_API_URL}/tmdb/genres`)
   .then((response) => response.json())
   .then((json) => dispatch(receiveGenresDispatch(json)));
 
 export const selectMovie = (movie) => (dispatch) => {
   const year = (new Date(movie.release_date)).getFullYear();
   const title = `${movie.title} (${year})`;
-  return fetch(`http://localhost:3001/wiki/movie?${new URLSearchParams({ title })}`)
+  return fetch(`${process.env.REACT_APP_API_URL}/wiki/movie?${new URLSearchParams({ title })}`)
     .then((response) => response.json())
     .then((details) => dispatch(selectMovieDispatch(movie, details)));
 };
