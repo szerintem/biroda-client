@@ -1,0 +1,38 @@
+.movie {
+  margin: 1px;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.title {
+  background-color: rgba(255, 255, 255, 90%);
+  font-family: Impact, sans-serif;
+  font-weight: bold;
+  font-size: 20pt;
+  padding: 2pt;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+}
+
+.stars {
+  position: absolute;
+  width: 20px;
+  writing-mode: vertical-rl;
+  text-align: center;
+  vertical-align: center;
+  height: 165px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+}
+
+.genres {
+  background-color: rgba(255, 255, 255, 90%);
+  font-family: Impact, sans-serif;
+}

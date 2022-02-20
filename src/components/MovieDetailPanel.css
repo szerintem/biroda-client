@@ -1,0 +1,16 @@
+
+.description {
+  width: 80%;
+  display: inline-block;
+}
+
+.links {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.closeButton {
+  margin-left: 10px;
+  cursor: pointer;
+}
