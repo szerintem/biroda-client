@@ -1,4 +1,9 @@
 module.exports = {
+  globals: {
+    it: true,
+    expect: true,
+    describe: true,
+  },
   env: {
     browser: true,
     es2021: true,
